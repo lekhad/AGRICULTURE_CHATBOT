@@ -1,0 +1,83 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sample convo
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: user_help
+  - action: utter_user_help
+  - intent: user_who
+  - action: utter_user_who
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: gratitude
+  - action: utter_gratitude
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: provide agriculture information
+  steps:
+  - intent: agriculture_info
+  - action: action_fetch_agriculture_info
+
+- story: provide horticulture information
+  steps:
+  - intent: horticulture_info
+  - action: action_fetch_horticulture_info
+
+- story: provide weather information
+  steps:
+  - intent: weather_info
+  - action: action_fetch_weather_info
+
+- story: provide crop recommendation
+  steps:
+  - intent: crop_recommendation_info
+  - action: action_fetch_crop_recommendation
+
+- story: provide soil recommendation
+  steps:
+  - intent: soil_recommendation_info
+  - action: action_fetch_soil_recommendation
+
+- story: provide fertilizer recommendation
+  steps:
+  - intent: fertilizer_recommendation_info
+  - action: action_fetch_fertilizer_recommendation
+
+- story: User asks an out-of-scope question
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+
+- story: Bot cannot find an answer
+  steps:
+  - action: action_kcc_helpline
+

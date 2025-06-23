@@ -1,0 +1,377 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: gratitude
+  examples: |
+    - thankyou
+    - thank you
+    - thankyou so much
+    - i am grateful to you
+    - thanks to you
+    - thanks   
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - I am fine
+    - I'm good
+    - doing well
+    - I am okay
+    - feeling great
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: user_who
+  examples: |
+    - who am i?
+    - what am i?
+    - Can you tell me who I am?
+    - Do you know who I am?
+    - What do you know about me?
+    - How do you see me?
+    - what do you think about me?
+    - tell me something about myself
+    - describe me
+    - guess who i am
+    - Take a wild guess, who am I?
+    - what do you call me?
+    - If you had to describe me, what would you say?
+    - What do you call me?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: user_help
+  examples: |
+    - can you help me with agriculture information
+    - can you help me with horticulture information
+    - can you help me with crop recommendation
+    - can you help me with soil information
+    - help me with agriculture information
+    - help me with horticulture information
+    - help me with crop recommendations
+    - help me with soil information
+    - i need to know information on agriculture 
+    - i need to know information on horticulture
+    - i need to know information on crop recommendation
+    - i need to know information on soil
+    - i need to help on agriculture information
+    - i need to help on horticulture information
+    - i need to help on crop recommendations
+    - i need to help on soil information
+
+- intent: agriculture_info
+  examples: |
+    - BEST VARIETIE OF [MAIZE](crop)
+    - [maize](crop) varieties
+    - what are the varieties of [maize](crop)
+    - How to control caterpillar in [pea](crop)?
+    - What is the best seed treatment for [wheat](crop)?
+    - What is the effect of Zn on [rice](crop)?
+    - How to control false smut in [rice](crop)?
+    - How to control white flies in [cotton](crop)?
+    - How to control BPH in [paddy](crop)?
+    - What is leaf spot disease in [maize](crop)?
+    - What is the fertilizer requirement for a one-year-old [mango](crop) tree?
+    - How to control aphids in [mustard](crop)?
+    - What is the best way to manage pest attacks in [wheat](crop)?
+    - What is the dosage for spraying 10 PPM 2,4-D in 100 liters of water for [paddy](crop)?
+    - How to control leaf folders in [rice](crop)?
+    - How to manage virus infections in [banana](crop)?
+    - What is the best season for planting [wheat](crop)?
+    - What are the different varieties of [rice](crop)?
+    - How to control ZnSO4 deficiency in [rice](crop)?
+    - What is the best variety of [maize](crop)?
+    - What is the correct fertilizer dosage for [rice](crop)?
+    - How to control powdery mildew in [Bengal gram](crop)?
+    - NUTRIENT MANAGEMENT IN [BLACK GRAM](crop)
+    - CONNECT TO LEVA-2 variety of [brinjal](crop)
+    - How to treat root rot disease in [soybean](crop)?
+    - THE CONTROL OF brown plant hopper (BPH)
+    - THE CONTROL OF WHITE FLYS in green gram
+    - What is the seed treatment for paddy?
+    - How should I treat paddy seeds?
+    - THE SEED TREATMENT
+    - Best practices for seed treatment
+    - How do I control false smut in paddy?
+    - THE CONTROL OF FALSE SMUT
+    - [chilli](crop) wilt disease
+    - What are the methods to prevent false smut?
+    - How to protect crops from false smut?
+    - virus infection in [black gram](crop)
+    - What are the symptoms and treatment for iron deficiency in [wheat](crop)?
+    - How to control stem borer in [rice](crop)?
+    - How to control green leaf hopper in [paddy](crop)?
+    - What is the effect of MgSO4 on [cotton](crop)?
+    - What is the best method to control pod borer in [pigeon pea](crop)?
+    - How to prevent rice blast disease in [rice](crop)?
+    - What is the best method to control gram caterpillars in [chickpea](crop)?
+    - How to control dieback disease in [mango](crop)?
+    - How to control tobacco insect in [groundnut](crop)?
+    - How to manage Tikka leaf spots in [groundnut](crop)?
+    - What are the best control measures for blast disease in [rice](crop)?
+    - How to improve yield in [sugarcane](crop)?
+    - How to manage rust disease in [wheat](crop)?
+    - What is the best method for crop rotation with [barley](crop)?
+    - How to increase nitrogen content in soil for [legumes](crop)?
+    - What is the best irrigation method for [rice](crop)?
+    - What is the nutrient management for [paddy](crop)?
+    - How should I manage nutrients in [paddy](crop)?
+    - Nutrient management in [paddy](crop)
+    - Fertilizer recommendation for [cotton](crop)
+    - PM KISAN SAMMAN NIDHI SCHEME BENIFICIARY STATUS
+    - what ate the centeral agriculture schemes ?
+    - What fertilizers should I use for [paddy](crop)?
+    - Urea, DAP, MOP for [paddy](crop)
+    - the season for [black gram](crop)
+
+- intent: horticulture_info
+  examples: |
+    - VARIETIES OF [CHILLI](vegetable)
+    - on [mango](fruit) leaf webber management
+    - [mango](fruit) leaf webber management
+    - webber management on leaf of [mango](fruit)
+    - fertilizer requirement for one year [mango](fruit) trees?
+    - what are the fertilizer requirement for one year [mango](fruit) trees?
+    - fertilizers required for one year [mango](fruit) trees?
+    - one year [mango](fruit) trees fertilizer requirements?
+    - NUTRIENT MANAGEMENT IN [TURMERIC](vegetable).
+    - How to increase fruit yield in [pomegranate](fruit)?
+    - What are the common diseases affecting [apple](fruit) trees?
+    - What is the best irrigation method for [banana](fruit)?
+    - How to control pests in [grapes](fruit)?
+    - What is the best season to plant [papaya](fruit)?
+    - How to manage anthracnose in [guava](fruit)?
+    - What are high-yielding varieties of [mango](fruit)?
+    - What is the best way to prune [pomegranate](fruit) trees?
+    - How to prevent fruit cracking in [litchi](fruit)?
+    - How to control fruit fly in [citrus](fruit)?
+    - How to manage leaf curl disease in [chilli](vegetable)?
+    - What is the best way to improve flowering in [jasmine](vegetable)?
+    - What are the symptoms of powdery mildew in [rose](vegetable)?
+    - What is the best mulching method for [pineapple](fruit)?
+    - How to manage soil nutrients for [cashew](fruit)?
+    - What is the best spacing for planting [coconut](fruit)?
+    - How to increase flowering in [marigold](vegetable)?
+    - What are the best organic pesticides for [betel leaf](vegetable)?
+    - How to improve fruit quality in [kiwi](fruit)?
+    - How to control nematodes in [strawberry](fruit)?
+    - What are the best practices for harvesting [avocado](fruit)?
+    - mites in [chilli](crop)
+    - how to prevent premature fruit drop in crops like [citrus](crop) and [apples](crop)?
+    - How to manage water stress in [almond](fruit)?
+    - What are the symptoms of bacterial wilt in [brinjal](vegetable)?
+    - What is the best season for growing [dragon fruit](fruit)?
+    - How to control fungal infections in [peach](fruit)?
+    - What is the best method for grafting [apple](fruit) trees?
+    - WHAT ARE THE FERTILIZERS FOR ONE YEAR [MANGO](fruit) TREES
+    - How to store harvested [oranges](fruit) for a long shelf life?
+    - What are the best companion plants for [lemon](fruit)?
+    - How to manage viral diseases in [black pepper](vegetable)?
+    - What is the ideal temperature range for growing [blueberry](fruit)?
+    - How to control aphids in [raspberry](fruit)?
+    - sowing time for [mango](fruit)
+    - which is the best time to sow [mango](fruit)?
+    - How to increase the shelf life of harvested [grapes](fruit)?
+    - What is the best way to transplant [guava](fruit) saplings?
+    - How to control bacterial blight in [pomegranate](fruit)?
+    - How to prevent sunburn in [watermelon](fruit)?
+    - What are the best organic fertilizers for [fig](fruit)?
+    - How to manage drought conditions for [date palm](fruit)?
+    - What are the different varieties of [persimmon](fruit)?
+    - How to enhance pollination in [custard apple](fruit)?
+    - How to propagate [jackfruit](fruit) through air layering?
+    - What is the best organic spray for [mangosteen](fruit)?
+    - Fertilizer recommendation for [apple](fruit)
+    - How to reduce fruit drop in [sapota](fruit)?
+    - How to improve fruit setting in [cherry](fruit)?
+    - What is the best way to protect [strawberry](fruit) plants from frost?
+    - How to manage black spot disease in [rose](vegetable)?
+    - What are the spacing requirements for [kiwifruit](fruit)?
+    - How to increase the yield of [pear](fruit)?
+    - What is the best pruning method for [plum](fruit)?
+    - How to control root rot in [avocado](fruit)?
+    - How to prevent mite damage in [chilli](vegetable)?
+    - What is the best way to control thrips in [chilli](vegetable)?
+
+- intent: weather_info
+  examples: |
+    - What is the weather like today in [Hyderabad](location)?
+    - What is the weather like today in [Vizag](location)?
+    - What is the weather like today in [Visakhapatnam](location)?
+    - What is the weather like today in [Rajahmundry](location)?
+    - Can you tell me the weather forecast for [Delhi](location)?
+    - How is the temperature in [Mumbai](location) right now?
+    - Will it rain in [Bangalore](location) tomorrow?
+    - Is there any chance of a storm in [Chennai](location) this week?
+    - What will be the temperature in [Pune](location) this evening?
+    - How is the humidity level in [Kolkata](location)?
+    - Give me the weather update for [Lucknow](location).
+    - Will it be sunny in [Ahmedabad](location) on Sunday?
+    - Is there snowfall expected in [Shimla](location) next week?
+    - Tell me the weather conditions in [Jaipur](location).
+    - What is the wind speed in [Goa](location) today?
+    - How cold will it be in [Manali](location) tonight?
+    - Is there a heatwave warning for [Nagpur](location)?
+    - How much rainfall is expected in [Mysore](location) this week?
+    - Will it be foggy in [Patna](location) tomorrow morning?
+    - What is the UV index in [Varanasi](location) today?
+    - How is the air quality in [Chandigarh](location)?
+    - What’s the weather prediction for [Coimbatore](location) over the next three days?
+    - Will there be thunderstorms in [Bhopal](location) tonight?
+
+- intent: crop_recommendation_info
+  examples: |
+    - crop recommendations for [west godavari](location)
+    - crops recommended for [west godavari](location)
+    - crops suitable for [east godavari](location)
+    - which crops are good to grow in [east godavari](location), andhra pradesh?
+    - What crop is suitable for [vizag](location), Andhra Pradesh?
+    - crop suitable for [vizag](location), Andhra pradesh?
+    - what is the crop suitable for [vizag](location), Andhra pradesh?
+    - which crops are suitable for [vizag](location), Andhra pradesh?
+    - crop recommendations for [vizag](location), andhra pradesh?
+    - What crop is suitable for [east godavari](location), Andhra Pradesh?
+    - crops good for [vizag](location), andhra pradesh?
+
+- intent: soil_recommendation_info
+  examples: |
+    - what type of soil present in [east godavari](location)?
+    - What is the best soil for [amla](crop)?
+    - soil type present in [vizag](location)
+    - type of soil present in [vizag](location)
+    - soil present in [vizag](location)
+    - Which soil is good for growing [wheat](crop)?
+    - What type of soil does [mango](fruit) need?
+    - What type of soil is best for growing [tomato](crop)?
+    - Which soil is suitable for [wheat](crop) cultivation?
+    - Can you suggest the best soil for [rice](crop) farming?
+    - What kind of soil does [maize](crop) need?
+    - soil type good for [sunflower](crop)
+    - soil good for [sunflower](crop)
+    - what soil is good for [sunflower](crop)?
+    - Which soil type is recommended for [sugarcane](fruit)?
+    - What is the ideal soil for growing [potato](crop)?
+    - How does soil pH affect [cotton](crop) growth?
+    - type of soil good for [amla](crop)?
+    - what soil is suitable for [amla](crop)?
+    - what soil suitable for [amla](crop)?
+    - What is the best soil composition for [onion](crop)?
+    - Which soil is most fertile for [corn](crop) farming?
+    - Can I grow [carrot](vegetable) in sandy soil?
+    - How can I improve soil fertility for [barley](crop)?
+    - What are the different types of soil used for [banana](fruit) farming?
+    - Which soil retains the most moisture for [soybean](crop)?
+    - How does clayey soil impact [chili](vegetable) growth?
+    - Is loamy soil good for [grapes](fruit) cultivation?
+    - What soil nutrients are essential for [mustard](crop) farming?
+    - How to test soil quality before planting [peanut](crop)?
+    - Does black soil support [cotton](crop) cultivation?
+    - What soil is best for growing [pulses](crop)?
+    - How do I prepare my soil for organic [mango](fruit) farming?
+
+- intent: out_of_scope
+  examples: |
+    - Can you help me with fashion tips?
+    - What should I do for first aid in case of burns?
+    - How to fix a mobile phone issue?
+    - what are the steps to cook?
+    - how can i sleep fast?
+    - can you help me with my homework
+
+- intent: fertilizer_recommendation_info
+  examples: |
+    - fertilizer recommendation for [chilli](vegetable)
+    - what is the fertilizer recommendation for [chilli](vegetable)
+    - what are the fertilizers used for [chilli](vegetable)
+    - fertilizers used for [chilli](vegetable)
+    - fertilizers recommended for [chilli](vegetable)
+    - [chilli](vegetable) fertilizer recommendation
+    - what fertilizers required for [chilli](vegetable)
+    - What fertilizer is recommended for [rice](crop)?
+    - What fertilizer is recommended for [rice](crop)?
+    - Is fertilizer recommended for [rice](crop)?
+    - Suggest fertilizer for [rice](crop).
+    - Recommended nutrients for [rice](crop) crop?
+    - what fertilizer used for [red gram](crop)?
+    - What should I use to improve [rice](crop) growth?

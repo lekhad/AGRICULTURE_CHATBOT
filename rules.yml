@@ -1,0 +1,57 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to agriculture queries
+  steps:
+  - intent: agriculture_info
+  - action: action_fetch_agriculture_info
+
+- rule: Respond to horticulture queries
+  steps:
+  - intent: horticulture_info
+  - action: action_fetch_horticulture_info
+
+- rule: Respond to weather queries
+  steps:
+  - intent: weather_info
+  - action: action_fetch_weather_info
+
+- rule: Respond to user identity
+  steps:
+    - intent: user_who
+    - action: utter_user_who
+
+- rule: Respond to crop recommendation queries
+  steps:
+  - intent: crop_recommendation_info
+  - action: action_fetch_crop_recommendation
+
+- rule: Respond to soil recommendation queries
+  steps:
+  - intent: soil_recommendation_info
+  - action: action_fetch_soil_recommendation
+
+- rule: Respond to fertilizer recommendation queries
+  steps:
+  - intent: fertilizer_recommendation_info
+  - action: action_fetch_fertilizer_recommendation
+
+- rule: Handle out of scope queries
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+
+- rule: Handle missing answers
+  steps:
+  - action: action_kcc_helpline

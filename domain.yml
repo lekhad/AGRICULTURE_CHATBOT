@@ -1,0 +1,93 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - agriculture_info
+  - horticulture_info
+  - weather_info
+  - user_help
+  - crop_recommendation_info
+  - soil_recommendation_info
+  - gratitude
+  - out_of_scope
+  - fertilizer_recommendation_info
+  - user_who
+
+entities:
+  - season
+  - crop
+  - soil_type
+  - weather_condition
+  - location
+  - weather_parameter
+  - fruit
+  - vegetable
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you? I am AGRICULTURE chatbot."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_user_who:
+    - text: "You’re a valuable user, and while I may not know you personally, I’m here to assist you with all the agricultural insights and information you need!"
+
+  utter_happy:
+    - text: "Great! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_gratitude:
+    - text: "You're welcome! I'm always here to help. Let me know if you have any other questions!"
+
+  utter_user_help:
+    - text: "Of course! Please specify your query."
+
+  utter_iamabot:
+    - text: "I am an agriculture bot."
+
+  utter_agriculture_info:
+    - text: "Here's some agricultural information: {crop} thrives well in {soil_type}."
+
+  utter_horticulture_info:
+    - text: "Here's some horticulture information about {crop}."
+
+  utter_soil_recommendation_info:
+    - text: "{soil_type} has specific properties that affect crop growth. Would you like more details?"
+
+  utter_weather_info:
+    - text: "Fetching weather updates for {location}. Please wait..."
+
+  utter_out_of_scope:
+    - text: "I'm specialized in agriculture and weather-related queries. For general information, please check online sources like Google or Wikipedia."
+
+  utter_kcc_helpline:
+    - text: "I'm sorry, but I couldn't find relevant information for your query. If you need further assistance, please call the KCC Toll-Free Number: 1800-180-1551."
+
+  utter_crop_recommendation_info:
+    - text: "Based on {soil_type} and {weather_condition}, you can grow {crop}."
+
+actions:
+  - action_fetch_agriculture_info
+  - action_fetch_horticulture_info
+  - action_fetch_weather_info
+  - action_fetch_crop_recommendation
+  - action_fetch_soil_recommendation
+  - action_kcc_helpline
+  - action_out_of_scope
+  - action_fetch_fertilizer_recommendation
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

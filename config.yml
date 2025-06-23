@@ -1,0 +1,42 @@
+# The config recipe.
+recipe: default.v1
+
+# Unique assistant identifier
+assistant_id: 20250225-161205-wary-track
+
+language: en
+
+# Pipeline for NLU
+pipeline:
+  - name: "WhitespaceTokenizer"
+
+  - name: "LanguageModelFeaturizer"
+    model_name: "bert"
+    model_weights: "bert_intent_model"  # Path to your fine-tuned BERT model
+    framework: "pt"
+
+  - name: "DIETClassifier"
+    epochs: 100
+    constrain_similarities: true
+    intent_classification: true  # Enable intent classification
+    entity_recognition: true
+
+  # Entity Synonym Mapper
+  - name: "EntitySynonymMapper"
+
+  # Response Selector
+  - name: "ResponseSelector"
+    epochs: 100
+    constrain_similarities: true
+
+# Configuration for Rasa Core (Dialogue management)
+policies:
+  - name: "MemoizationPolicy"
+  - name: "RulePolicy"
+  - name: "TEDPolicy"
+    max_history: 10
+    epochs: 200
+    constrain_similarities: true
+
+
+
